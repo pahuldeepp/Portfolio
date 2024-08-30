@@ -1,0 +1,149 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 0px;
+  flex-direction: row-reverse; /* Profile image on the right on large screens */
+}
+
+.profile-img {
+  width: 465px;
+  height: 550px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.hero-content {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.hero-content h1 {
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #bcbbbb;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #eeddc4, #f7e8d1, #E0E0E0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 250px;
+  font-size: 83px;
+}
+
+.dynamic-text {
+  color: rgb(212, 212, 212);
+  font-size: 55px;
+  font-style: oblique;
+  line-height: 60px;
+  margin-bottom: 0px;
+  transition: opacity 0.5s ease-in-out;
+  margin-top: 80px;
+}
+
+.hero-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.hero-connect {
+  padding: 25px 45px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #eeddc4, #f7e8d1, #E0E0E0);
+  cursor: pointer;
+  color: black !important;
+  text-decoration: none;
+  margin-top: 130px;
+  margin-left: 80px;
+}
+
+#anchor {
+  color: black;
+}
+
+.hero-resume {
+  padding: 25px 65px;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin-top: 180px;
+}
+
+.hero-connect:hover {
+  border: 2px solid white;
+}
+
+.hero-resume:hover {
+  border-color: #8361bb;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .profile-img {
+    order: 1; /* Order first */
+    width: 240px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    order: 2; /* Order second */
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h1 span {
+    font-size: 50px;
+  }
+
+  .dynamic-text {
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 10px;
+  }
+
+  .hero-action {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    padding: 15px 30px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}

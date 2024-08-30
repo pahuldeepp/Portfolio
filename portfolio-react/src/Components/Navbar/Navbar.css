@@ -1,0 +1,144 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+
+/* Navbar Logo */
+.logo {
+    width: 160px;
+    height: 70px;
+    border-radius: 30px;
+}
+
+/* Mobile Menu Open Button */
+.nav-mob-open {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Menu Close Button */
+.nav-mob-close {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 300px; /* Adjust this value to fit your layout */
+}
+
+/* Nav Menu for Desktop */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* Nav Menu for Mobile */
+.nav-menu-mobile {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: black;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+}
+
+.nav-menu-mobile.opened {
+    right: 0; /* Ensure the 'opened' class sets the sidebar to be fully visible */
+}
+
+/* Nav Menu List Item */
+.nav-menu li, .nav-menu-mobile li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-menu li p, .nav-menu-mobile li p {
+    color: white; /* Ensure text color is set to white */
+    font-size: 20px; /* Set a readable font size */
+}
+
+.nav-menu li img, .nav-menu-mobile li img {
+    display: flex;
+    margin: auto;
+}
+
+/* Existing styles... */
+
+.anchor-link {
+    text-decoration: none;
+    color: white; /* Default link color */
+}
+
+.nav-connect {
+    padding: 20px 30px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #eeddc4, #f7e8d1, #E0E0E0);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+/* Specific styles for the connect link */
+.connect-link {
+    color: black !important; /* Force text color to black */
+    text-decoration: none;
+}
+
+.git-logo {
+    margin-left: 10px;
+    width: 28px;  /* Adjust size as needed */
+    height: 22px; /* Adjust size as needed */
+    vertical-align: middle; /* Align vertically with the text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px 50px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+        z-index: 3;
+    }
+
+    .nav-mob-close {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu-mobile {
+        display: flex;
+    }
+
+    .nav-menu-mobile li {
+        font-size: 30px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
